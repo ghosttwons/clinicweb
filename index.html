@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Dental Dynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- VARIABLES --- */
+    :root {
+      --primary: #005A8C; 
+      --accent: #FF7E5F; 
+      --dark: #333;
+      --light-text: #666;
+      --bg: #F8F9FA;
+      --white: #FFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+
+    /* --- TYPOGRAPHY & BUTTONS --- */
+    h1, h2, h3 { color: var(--primary); }
+    .btn {
+      display: inline-block; padding: 12px 28px; border-radius: 50px; text-decoration: none;
+      font-weight: 600; cursor: pointer; border: none; transition: all 0.3s ease;
+    }
+    .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(255,126,95,0.4); }
+    .btn-primary:hover { background: #e06c50; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255,126,95,0.6); }
+
+    /* --- DYNAMIC HEADER --- */
+    header {
+      position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 25px 5%; background: var(--white); z-index: 1000; transition: all 0.3s ease;
+    }
+    header.scrolled { padding: 15px 5%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    
+    .logo { font-size: 24px; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    /* Navigation */
+    .nav-links { display: flex; gap: 30px; }
+    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hamburger Menu (Mobile) */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 25px; height: 3px; background: var(--primary); transition: 0.3s; }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+      background: linear-gradient(rgba(0,90,140,0.8), rgba(0,90,140,0.8)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+      padding: 0 20px; color: var(--white);
+    }
+    .hero h1 { font-size: 4rem; color: var(--white); margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-inline: auto; }
+
+    /* --- SCROLL ANIMATIONS (FADE UP) --- */
+    .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- LAYOUT SECTIONS --- */
+    section { padding: 100px 5%; }
+    .bg-light { background: var(--bg); }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 { font-size: 2.5rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    
+    /* Service Cards */
+    .card {
+      background: var(--white); padding: 40px; border-radius: 15px; text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+    .card .icon { font-size: 50px; margin-bottom: 20px; }
+
+    /* --- MODAL (POPUP FORM) --- */
+    .modal-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6);
+      display: flex; justify-content: center; align-items: center; z-index: 2000;
+      opacity: 0; visibility: hidden; transition: 0.3s;
+    }
+    .modal-overlay.active { opacity: 1; visibility: visible; }
+    
+    .modal-content {
+      background: var(--white); padding: 40px; border-radius: 15px; width: 90%; max-width: 500px;
+      position: relative; transform: translateY(-50px); transition: 0.3s;
+    }
+    .modal-overlay.active .modal-content { transform: translateY(0); }
+    
+    .close-modal {
+      position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: var(--light-text);
+    }
+    
+    /* Forms */
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;
+    }
+
+    /* --- FOOTER --- */
+    footer { background: var(--primary); color: var(--white); text-align: center; padding: 40px 20px; }
+    footer p { color: #A0C4D8; }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: absolute; top: 100%; left: -100%; width: 100%; background: var(--white);
+        flex-direction: column; text-align: center; padding: 20px 0; box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+      }
+      .nav-links.active { left: 0; }
+      .hero h1 { font-size: 2.5rem; }
+      .nav-cta { display: none; } /* Hide button on mobile nav bar to save space */
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <a href="#" class="logo">Miracle<span>Smile</span></a>
+    
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-item">About Us</a>
+      <a href="#services" class="nav-item">Services</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+
+    <button class="btn btn-primary nav-cta" onclick="openModal()">Book Online</button>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="fade-up">
+      <h1>Beautiful Smiles Start Here</h1>
+      <p>Modern, painless, and compassionate dentistry for your whole family. Book your appointment in under 60 seconds.</p>
+      <button class="btn btn-primary" onclick="openModal()">Request Appointment</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-header fade-up">
+      <h2>Welcome to Your New Dental Home</h2>
+      <p>Experience healthcare designed entirely around your comfort.</p>
+    </div>
+    <div class="grid">
+      <div class="fade-up">
+        <h3>Expert Team</h3>
+        <p>Our highly trained professionals use the latest technology to ensure you get the best care possible.</p>
+      </div>
+      <div class="fade-up" style="transition-delay: 0.2s;">
+        <h3>Comfort First</h3>
+        <p>From warm blankets to painless numbing techniques, we eliminate dental anxiety completely.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+    <div class="section-header fade-up">
+      <h2>Our Services</h2>
+      <p>Comprehensive care tailored to your unique needs.</p>
+    </div>
+    
+    <div class="grid">
+      <div class="card fade-up">
+        <div class="icon">🪥</div>
+        <h3>Preventative Care</h3>
+        <p>Keep your teeth healthy with routine cleanings, exams, and digital x-rays.</p>
+      </div>
+      <div class="card fade-up" style="transition-delay: 0.2s;">
+        <div class="icon">✨</div>
+        <h3>Cosmetic Dentistry</h3>
+        <p>Enhance your smile with teeth whitening, veneers, and Invisalign.</p>
+      </div>
+      <div class="card fade-up" style="transition-delay: 0.4s;">
+        <div class="icon">🦷</div>
+        <h3>Implants & Crowns</h3>
+        <p>Permanent, natural-looking solutions to restore missing or damaged teeth.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Miracle Smile Dental</h2>
+    <p style="margin: 20px 0;">123 Smile Boulevard | (555) 123-4567</p>
+    <p>&copy; 2026 Miracle Smile Dental Concept. All rights reserved.</p>
+  </footer>
+
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h2 style="margin-bottom: 20px;">Request an Appointment</h2>
+      
+      <form id="bookingForm" onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" required placeholder="(555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Reason for Visit</label>
+          <select required>
+            <option value="">Select an option...</option>
+            <option value="cleaning">Routine Cleaning</option>
+            <option value="pain">Tooth Pain / Emergency</option>
+            <option value="cosmetic">Cosmetic Consult</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // 1. DYNAMIC HEADER SCROLL EFFECT
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // 2. MOBILE HAMBURGER MENU LOGIC
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when a link is clicked
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // 3. SCROLL ANIMATIONS (Intersection Observer)
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2 // Trigger when 20% of element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.fade-up');
+    fadeElements.forEach(el => observer.observe(el));
+
+    // 4. MODAL (POPUP) LOGIC
+    const modal = document.getElementById('bookingModal');
+
+    function openModal() {
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+    }
+
+    // Close modal if user clicks outside the box
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // 5. FORM SUBMISSION SIMULATION
+    function submitForm(event) {
+      event.preventDefault(); // Prevent page from reloading
+      alert("Thank you! Your appointment request has been sent. Our team will call you shortly to confirm your time.");
+      closeModal();
+      document.getElementById('bookingForm').reset(); // Clear the form
+    }
+  </script>
+</body>
+</html>
