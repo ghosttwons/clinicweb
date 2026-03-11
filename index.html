@@ -8,16 +8,24 @@
   
   <meta name="description" content="¿Buscas un dentista cerca de mi? Smile Avenue es una clínica dental profesional en San José. Ofrecemos los mejores servicios dentales, estética y limpieza dental.">
 
+  <meta name="keywords" content="costa rica dentistas, clinicas dentales, mejor clinica en san jose, dentista cerca de mi, clinica dental profesional, servicios dentales, limpieza dental, Smile Avenue, odontología, Costa Rica">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   
   <style>
     /* --- VARIABLES DE MARCA: Smile Avenue --- */
     :root {
-      --primary: #1A2938; /* Azul marino profundo y muted (apagado) */
+      /* Colores principales */
+      --primary: #1A2938; /* Azul marino profundo y muted (apagado), como en la imagen */
       --accent: #4A6278; /* Azul marino más claro para botones y contrastes */
+      
+      /* Tipografía y textos */
       --dark: #2C353D; /* Gris oscuro para textos principales */
       --light-text: #6A757D; /* Gris medio para descripciones */
-      --bg: #F4F6F7; /* Gris muy claro / Off-white para el fondo de las secciones */
+      
+      /* Fondos y fondos de tarjetas */
+      --bg: #F4F6F7; /* Gris muy claro / Off-white (blanco roto), como en la imagen */
       --white: #FFFFFF; /* Blanco puro para las tarjetas */
     }
 
@@ -37,21 +45,76 @@
     /* --- HEADER DINÁMICO --- */
     header {
       position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;
-      padding: 25px 5%; background: var(--white); z-index: 1000; transition: all 0.3s ease;
+      padding: 25px 5%; background: var(--primary); z-index: 1000; transition: all 0.3s ease;
     }
-    header.scrolled { padding: 15px 5%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    header.scrolled { padding: 15px 5%; background: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     
-    .logo { font-size: 24px; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .logo span { color: var(--accent); font-weight: 300; }
+    /* El logo en el header, blanco sobre fondo oscuro */
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Prata', serif;
+      font-size: 32px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    /* El texto 'AVENUE' */
+    .logo span {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: var(--white);
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-top: 0px;
+      margin-bottom: 2px;
+    }
+
+    /* El icono de sonrisa debajo del texto */
+    .logo::after {
+      content: '';
+      display: block;
+      width: 50%; /* Longitud de la sonrisa */
+      height: 2px; /* Grosor de la sonrisa */
+      background-color: var(--white);
+      border-radius: 50%;
+      border-bottom: 2px solid var(--white);
+      margin-top: 2px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Cambio de color del logo al hacer scroll */
+    header.scrolled .logo,
+    header.scrolled .logo span {
+      color: var(--primary);
+    }
+    
+    header.scrolled .logo::after {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
 
     /* Navegación */
     .nav-links { display: flex; gap: 30px; }
-    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: color 0.3s; }
+    .nav-links a { text-decoration: none; color: var(--white); font-weight: 600; transition: color 0.3s; }
     .nav-links a:hover { color: var(--accent); }
+
+    /* Cambio de color de enlaces de navegación al hacer scroll */
+    header.scrolled .nav-links a { color: var(--dark); }
+    header.scrolled .nav-links a:hover { color: var(--accent); }
 
     /* Menú Hamburguesa (Móvil) */
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 25px; height: 3px; background: var(--primary); transition: 0.3s; }
+    .hamburger span { width: 25px; height: 3px; background: var(--white); transition: 0.3s; }
+    
+    header.scrolled .hamburger span { background: var(--primary); }
 
     /* --- SECCIÓN HERO --- */
     .hero {
@@ -131,7 +194,10 @@
 <body>
 
   <header id="header">
-    <a href="#" class="logo">Smile<span>Avenue</span></a>
+    <a href="#" class="logo">
+      Smile
+      <span>AVENUE</span>
+    </a>
     
     <nav class="nav-links" id="navLinks">
       <a href="#about" class="nav-item">Nosotros</a>
@@ -149,7 +215,7 @@
   <section class="hero">
     <div class="fade-up">
       <h1>La Mejor Clínica en San José para tu Sonrisa</h1>
-      <p>Si buscas un <strong>dentista cerca de mí</strong>, en Smile Avenue encontrarás una <strong>clínica dental profesional</strong> con atención compasiva, moderna y sin dolor para toda la familia.</p>
+      <p>Si buscas un <strong>dentista cerca de mí</strong> de confianza, en Smile Avenue encontrarás una <strong>clínica dental profesional</strong> con atención moderna, indolora y compasiva para toda la familia.</p>
       <button class="btn btn-primary" onclick="openModal()">Solicitar Cita Ahora</button>
     </div>
   </section>
@@ -234,6 +300,7 @@
     // 1. EFECTO DE SCROLL EN EL HEADER
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
+      // Cambio de color de la cabecera al hacer scroll
       if (window.scrollY > 50) {
         header.classList.add('scrolled');
       } else {
