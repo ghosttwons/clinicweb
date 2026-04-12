@@ -4,190 +4,203 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Smile Avenue | Mejor Clínica en San José | Costa Rica Dentistas</title>
+  <title>Smile Avenue | Mejor Clínica Dental en San José | Costa Rica</title>
   
-  <meta name="description" content="¿Buscas un dentista cerca de mi? Smile Avenue es una clínica dental profesional en San José. Ofrecemos los mejores servicios dentales, estética y limpieza dental.">
+  <meta name="description" content="¿Buscas un dentista cerca de mí? Smile Avenue es una clínica dental profesional en San José. Ofrecemos limpieza dental, blanqueamiento con láser, implantes y más.">
+  <meta name="keywords" content="costa rica dentistas, clinicas dentales, mejor clinica en san jose, dentista cerca de mi, clinica dental profesional, servicios dentales, limpieza dental, blanqueamiento laser, Smile Avenue, odontología">
 
-  <meta name="keywords" content="costa rica dentistas, clinicas dentales, mejor clinica en san jose, dentista cerca de mi, clinica dental profesional, servicios dentales, limpieza dental, Smile Avenue, odontología">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-   
     :root {
-      
-      --primary: #1A2938; 
-      --accent: #4A6278; 
-      
-      
+      --primary: #1A2938;
+      --accent: #4A6278;
+      --accent-light: #6A8DA5;
       --dark: #2C353D;
-      --light-text: #6A757D; 
-      
-      
-      --bg: #F4F6F7; 
-      --white: #FFFFFF; 
+      --light-text: #6A757D;
+      --bg: #F4F6F7;
+      --bg-alt: #EDF0F3;
+      --white: #FFFFFF;
+      --border: #DDE3E8;
+      --success: #3A7D61;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+    body { background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; font-family: 'Poppins', sans-serif; }
 
-    
-    h1, h2, h3 { color: var(--primary); }
+    h1, h2, h3, h4 { color: var(--primary); font-family: 'Poppins', sans-serif; }
+
     .btn {
-      display: inline-block; padding: 12px 28px; border-radius: 50px; text-decoration: none;
+      display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none;
       font-weight: 600; cursor: pointer; border: none; transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif; font-size: 0.95rem;
     }
-    .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(26, 41, 56, 0.2); }
-    .btn-primary:hover { background: #374A5C; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(26, 41, 56, 0.3); }
+    .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(74,98,120,0.35); }
+    .btn-primary:hover { background: #374A5C; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(74,98,120,0.4); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.6); }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
 
-   
     header {
-      position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 5%; background: var(--primary); z-index: 1000; transition: all 0.3s ease;
+      position: fixed; top: 0; width: 100%;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 5%; background: var(--primary); z-index: 1000; transition: all 0.35s ease;
     }
-    header.scrolled { padding: 12px 5%; background: var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    
-/* Logo */
-    
-    .logo {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: var(--white);
-      transition: color 0.3s ease;
-    }
+    header.scrolled { padding: 12px 5%; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 
- 
-    .logo-smile {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px;
-      font-style: italic; 
-      font-weight: 400;
-      line-height: 1;
-      margin-bottom: 2px;
-    }
+    .logo { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--white); transition: color 0.3s ease; }
+    .logo-smile { font-family: 'Playfair Display', serif; font-size: 36px; font-style: italic; font-weight: 400; line-height: 1; margin-bottom: 2px; }
+    .logo-avenue { font-family: 'Poppins', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 6px; font-weight: 300; margin-left: 6px; }
+    .logo-swoosh { width: 120%; height: 10px; margin-top: 4px; color: var(--white); transition: color 0.3s ease; }
+    header.scrolled .logo, header.scrolled .logo-smile, header.scrolled .logo-avenue { color: var(--primary); }
+    header.scrolled .logo-swoosh { color: var(--primary); }
 
-    
-    .logo-avenue {
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 5px; 
-      font-weight: 300;
-      line-height: 1;
-      margin-left: 5px; 
-    }
-
-    
-    .logo-swoosh {
-      width: 120%; 
-      height: 12px;
-      margin-top: 6px;
-      color: var(--white);
-      transition: color 0.3s ease;
-    }
-
-    
-    header.scrolled .logo,
-    header.scrolled .logo-smile,
-    header.scrolled .logo-avenue,
-    header.scrolled .logo-swoosh {
-      color: var(--primary);
-    }
-
-    /* Navegación */
-    .nav-links { display: flex; gap: 30px; align-items: center; }
-    .nav-links a { text-decoration: none; color: var(--white); font-weight: 600; transition: color 0.3s; }
-    .nav-links a:hover { color: var(--accent); }
-
-    /* Cambio de color de enlaces al hacer scroll */
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { text-decoration: none; color: rgba(255,255,255,0.85); font-weight: 500; font-size: 0.92rem; transition: color 0.3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent-light); transition: width 0.3s; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--white); }
     header.scrolled .nav-links a { color: var(--dark); }
     header.scrolled .nav-links a:hover { color: var(--accent); }
+    header.scrolled .nav-links a::after { background: var(--accent); }
 
-    /* Menú Hamburguesa (Móvil) */
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 25px; height: 3px; background: var(--white); transition: 0.3s; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { width: 26px; height: 2.5px; background: var(--white); border-radius: 3px; transition: all 0.3s; display: block; }
     header.scrolled .hamburger span { background: var(--primary); }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-    /* --- SECCIÓN HERO --- */
-    .hero {
-      height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
-      background: linear-gradient(rgba(26, 41, 56, 0.8), rgba(26, 41, 56, 0.8)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-      padding: 0 20px; color: var(--white);
+    .mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--primary); z-index: 999; flex-direction: column;
+      justify-content: center; align-items: center; gap: 30px;
+      opacity: 0; visibility: hidden; transition: all 0.3s ease;
     }
-    .hero h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 20px; line-height: 1.2; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-inline: auto; color: #E0E6ED; }
+    .mobile-menu.active { opacity: 1; visibility: visible; }
+    .mobile-menu a { color: var(--white); text-decoration: none; font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; transition: color 0.3s; }
+    .mobile-menu a:hover { color: var(--accent-light); }
+    .mobile-menu .btn { margin-top: 10px; }
 
-    /* --- ANIMACIONES AL HACER SCROLL --- */
-    .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+      background: linear-gradient(160deg, rgba(26,41,56,0.92) 0%, rgba(74,98,120,0.85) 100%),
+        url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+      padding: 120px 20px 80px; color: var(--white);
+    }
+    .hero-inner { max-width: 750px; margin: 0 auto; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.9); padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); margin-bottom: 20px; line-height: 1.2; font-family: 'Playfair Display', serif; }
+    .hero h1 em { font-style: italic; color: #A8C4D8; }
+    .hero p { font-size: clamp(0.95rem, 2.5vw, 1.1rem); margin-bottom: 36px; color: rgba(255,255,255,0.8); max-width: 600px; margin-inline: auto; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    .fade-up { opacity: 0; transform: translateY(35px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* --- SECCIONES --- */
-    section { padding: 100px 5%; }
+    section { padding: clamp(60px, 8vw, 100px) 5%; }
     .bg-light { background: var(--bg); }
-    .section-header { text-align: center; margin-bottom: 50px; }
-    .section-header h2 { font-size: 2.5rem; }
+    .section-header { text-align: center; margin-bottom: 55px; }
+    .section-header h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+    .section-header p { color: var(--light-text); max-width: 600px; margin: 0 auto; }
+    .section-tag { display: inline-block; background: var(--bg-alt); color: var(--accent); padding: 4px 16px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    
-    /*  Servicios */
-    .card {
-      background: var(--white); padding: 40px; border-radius: 15px; text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.03); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #EBEFF2;
-    }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-    .card .icon { font-size: 50px; margin-bottom: 20px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+    .about-card { background: var(--white); padding: 36px; border-radius: 16px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    .about-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); }
+    .about-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+    .about-card p { color: var(--light-text); font-size: 0.93rem; }
 
-    /* --- MODAL (FORMULARIO POPUP) --- */
-    .modal-overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 41, 56, 0.8);
-      display: flex; justify-content: center; align-items: center; z-index: 2000;
-      opacity: 0; visibility: hidden; transition: 0.3s;
-    }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card { background: var(--white); padding: 36px 30px; border-radius: 16px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    .card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--accent); transform: scaleX(0); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 16px 35px rgba(0,0,0,0.09); }
+    .card:hover::after { transform: scaleX(1); }
+    .card .icon { font-size: 44px; width: 76px; height: 76px; background: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .card p { color: var(--light-text); font-size: 0.88rem; line-height: 1.7; }
+    .card-badge { display: inline-block; background: #EAF2F8; color: var(--accent); padding: 3px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; margin-top: 14px; letter-spacing: 1px; }
+
+    #doctores { background: var(--white); }
+    .doctors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .doctor-card { background: var(--bg); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; }
+    .doctor-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.08); }
+    .doctor-card--empty { border: 2px dashed var(--border); background: var(--bg); }
+    .doctor-img { width: 100%; height: 260px; background: linear-gradient(135deg, #C8D8E4, #A4B8C8); display: flex; align-items: center; justify-content: center; }
+    .doctor-img--empty { background: linear-gradient(135deg, #E8EDF1, #D4DCE3); }
+    .doctor-img svg { width: 90px; height: 90px; opacity: 0.5; }
+    .doctor-info { padding: 24px; }
+    .doctor-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; color: var(--primary); }
+    .doctor-title { color: var(--accent); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .doctor-bio { color: var(--light-text); font-size: 0.87rem; line-height: 1.7; }
+    .doctor-specialties { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .specialty-tag { background: var(--white); border: 1px solid var(--border); color: var(--accent); padding: 3px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: 500; }
+
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26,41,56,0.75); backdrop-filter: blur(6px); display: flex; justify-content: center; align-items: center; z-index: 2000; opacity: 0; visibility: hidden; transition: all 0.3s; padding: 20px; }
     .modal-overlay.active { opacity: 1; visibility: visible; }
-    
-    .modal-content {
-      background: var(--white); padding: 40px; border-radius: 15px; width: 90%; max-width: 500px;
-      position: relative; transform: translateY(-50px); transition: 0.3s;
-    }
-    .modal-overlay.active .modal-content { transform: translateY(0); }
-    
-    .close-modal {
-      position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: var(--light-text);
-    }
-    
-    /* Formularios */
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; color: var(--primary); }
-    .form-group input, .form-group select {
-      width: 100%; padding: 12px; border: 1px solid #CFD8DC; border-radius: 8px; font-family: inherit;
-    }
-    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+    .modal-content { background: var(--white); padding: clamp(28px, 5vw, 45px); border-radius: 20px; width: 100%; max-width: 520px; position: relative; transform: translateY(-30px) scale(0.97); transition: all 0.3s; max-height: 90vh; overflow-y: auto; }
+    .modal-overlay.active .modal-content { transform: translateY(0) scale(1); }
+    .modal-header { margin-bottom: 28px; }
+    .modal-header h2 { font-size: 1.5rem; }
+    .modal-header p { color: var(--light-text); font-size: 0.88rem; margin-top: 6px; }
+    .close-modal { position: absolute; top: 16px; right: 20px; font-size: 26px; cursor: pointer; color: var(--light-text); background: none; border: none; line-height: 1; transition: color 0.2s; }
+    .close-modal:hover { color: var(--dark); }
 
-    /* --- FOOTER --- */
-    footer { background: var(--primary); color: var(--white); text-align: center; padding: 50px 20px; }
-    footer p { color: #A4B5C4; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.82rem; color: var(--primary); letter-spacing: 0.5px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--dark); background: var(--bg); transition: all 0.25s; appearance: none; -webkit-appearance: none; }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236A757D' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px; background-color: var(--bg); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); background: var(--white); box-shadow: 0 0 0 3px rgba(74,98,120,0.12); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #AABAC6; }
 
-    /* --- RESPONSIVIDAD MÓVIL --- */
+    .form-submit { width: 100%; padding: 15px; border-radius: 50px; background: var(--accent); color: var(--white); border: none; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px; margin-top: 6px; }
+    .form-submit:hover { background: #374A5C; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(74,98,120,0.35); }
+
+    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--success); color: var(--white); padding: 14px 28px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 3000; opacity: 0; transition: all 0.4s; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    footer { background: var(--primary); color: var(--white); padding: clamp(50px, 8vw, 80px) 5% 40px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+    .footer-brand p { color: #8AA4B8; font-size: 0.88rem; margin: 16px 0 0; max-width: 280px; }
+    .footer-col h4 { color: var(--white); font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 16px; font-weight: 700; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: #8AA4B8; text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-col p { color: #8AA4B8; font-size: 0.88rem; margin-bottom: 8px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; text-align: center; color: #5A7A8E; font-size: 0.82rem; }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .about-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
       .hamburger { display: flex; }
-      .nav-links {
-        position: absolute; top: 100%; left: -100%; width: 100%; background: var(--white);
-        flex-direction: column; text-align: center; padding: 20px 0; box-shadow: 0 10px 10px rgba(0,0,0,0.05);
-        transition: 0.3s;
-      }
-      .nav-links.active { left: 0; }
-      .hero h1 { font-size: 2.5rem; }
+      .nav-links { display: none; }
+      .mobile-menu { display: flex; }
       .nav-cta { display: none; }
+      .hero { padding: 100px 20px 60px; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .hero-btns .btn { width: 100%; max-width: 300px; text-align: center; }
+      .services-grid { grid-template-columns: 1fr; }
+      .doctors-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-brand { grid-column: auto; }
+    }
+    @media (max-width: 480px) {
+      .logo-smile { font-size: 30px; }
+      .logo-avenue { font-size: 9px; letter-spacing: 4px; }
+      .modal-content { padding: 28px 22px; }
     }
   </style>
 </head>
 <body>
 
   <header id="header">
-    
     <a href="#" class="logo">
       <span class="logo-smile">Smile</span>
       <span class="logo-avenue">AVENUE</span>
@@ -195,171 +208,324 @@
         <path d="M 0,5 Q 50,25 100,5 Q 50,18 0,5 Z" fill="currentColor"/>
       </svg>
     </a>
-    
     <nav class="nav-links" id="navLinks">
-      <a href="#about" class="nav-item">Nosotros</a>
-      <a href="#services" class="nav-item">Servicios Dentales</a>
-      <a href="#contact" class="nav-item">Contacto</a>
-      <button class="btn btn-primary nav-cta" onclick="openModal()">Agendar Cita</button>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#doctores">Doctores</a>
+      <a href="#contacto">Contacto</a>
+      <button class="btn btn-primary nav-cta" onclick="abrirModal()">Agendar Cita</button>
     </nav>
-
-    <div class="hamburger" id="hamburger">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </header>
 
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#nosotros" onclick="cerrarMenuMovil()">Nosotros</a>
+    <a href="#servicios" onclick="cerrarMenuMovil()">Servicios</a>
+    <a href="#doctores" onclick="cerrarMenuMovil()">Doctores</a>
+    <a href="#contacto" onclick="cerrarMenuMovil()">Contacto</a>
+    <button class="btn btn-outline" onclick="cerrarMenuMovil(); abrirModal()">Agendar Cita</button>
+  </div>
+
   <section class="hero">
-    <div class="fade-up">
-      <h1>La Mejor Clínica en San José para tu Sonrisa</h1>
-      <p>Si buscas un <strong>dentista cerca de mí</strong> de confianza, en Smile Avenue encontrarás una <strong>clínica dental profesional</strong> con atención moderna, indolora y compasiva para toda la familia.</p>
-      <button class="btn btn-primary" onclick="openModal()">Solicitar Cita Ahora</button>
+    <div class="hero-inner fade-up">
+      <div class="hero-badge">✦ Clínica Dental Profesional ✦</div>
+      <h1>La Mejor Clínica en San José para tu <em>Sonrisa</em></h1>
+      <p>Si buscas un <strong>dentista cerca de mí</strong> de confianza, en Smile Avenue encontrarás atención moderna, indolora y compasiva para toda la familia.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="abrirModal()">Solicitar Cita Ahora</button>
+        <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+      </div>
     </div>
   </section>
 
-  <section id="about">
+  <section id="nosotros">
     <div class="section-header fade-up">
+      <span class="section-tag">Quiénes somos</span>
       <h2>Bienvenido a tu Nuevo Hogar Dental</h2>
-      <p>Destacamos entre las <strong>clínicas dentales</strong> al diseñar una experiencia basada enteramente en tu confort.</p>
+      <p>Destacamos entre las <strong>clínicas dentales</strong> al diseñar una experiencia basada enteramente en tu confort y bienestar.</p>
     </div>
-    <div class="grid">
-      <div class="fade-up">
-        <h3>Expertos Costa Rica Dentistas</h3>
-        <p>Nuestro equipo de profesionales altamente capacitados utiliza la tecnología más avanzada para garantizar que recibas tratamientos de la más alta calidad y seguridad.</p>
+    <div class="about-grid">
+      <div class="about-card fade-up">
+        <h3>🦷 Expertos Costa Rica Dentistas</h3>
+        <p>Nuestro equipo de profesionales altamente capacitados utiliza tecnología de vanguardia para garantizar tratamientos de la más alta calidad y seguridad.</p>
       </div>
-      <div class="fade-up" style="transition-delay: 0.2s;">
-        <h3>Confort Absoluto</h3>
-        <p>Desde instalaciones relajantes hasta técnicas de adormecimiento indoloras, eliminamos por completo la ansiedad de ir al dentista.</p>
+      <div class="about-card fade-up" style="transition-delay: 0.15s;">
+        <h3>😌 Confort Absoluto</h3>
+        <p>Desde instalaciones relajantes hasta técnicas de anestesia indoloras, eliminamos por completo la ansiedad de visitar el dentista.</p>
+      </div>
+      <div class="about-card fade-up" style="transition-delay: 0.3s;">
+        <h3>🏆 Tecnología Avanzada</h3>
+        <p>Radiografías digitales, escáner 3D intraoral y equipos de última generación para diagnósticos más precisos y tratamientos más eficaces.</p>
+      </div>
+      <div class="about-card fade-up" style="transition-delay: 0.45s;">
+        <h3>❤️ Atención Familiar</h3>
+        <p>Atendemos a pacientes de todas las edades. Desde los más pequeños hasta adultos mayores, toda la familia es bienvenida en Smile Avenue.</p>
       </div>
     </div>
   </section>
 
-  <section id="services" class="bg-light">
+  <section id="servicios" class="bg-light">
     <div class="section-header fade-up">
-      <h2>Nuestros Servicios Dentales</h2>
-      <p>Atención integral y personalizada adaptada a tus necesidades únicas.</p>
+      <span class="section-tag">Nuestros Servicios</span>
+      <h2>Servicios Dentales Integrales</h2>
+      <p>Atención personalizada adaptada a tus necesidades únicas con tecnología de punta.</p>
     </div>
-    
-    <div class="grid">
+    <div class="services-grid">
       <div class="card fade-up">
         <div class="icon">🪥</div>
         <h3>Limpieza Dental</h3>
-        <p>Mantén tus dientes perfectamente sanos con nuestra <strong>limpieza dental</strong> profunda, exámenes de rutina y radiografías digitales precisas.</p>
+        <p>Mantén tus dientes perfectamente sanos con nuestra limpieza dental profunda, exámenes de rutina y radiografías digitales precisas.</p>
+        <span class="card-badge">Preventivo</span>
       </div>
-      <div class="card fade-up" style="transition-delay: 0.2s;">
+      <div class="card fade-up" style="transition-delay: 0.1s;">
         <div class="icon">✨</div>
         <h3>Odontología Estética</h3>
-        <p>Mejora y rejuvenece tu sonrisa con nuestros tratamientos de blanqueamiento profesional, carillas de porcelana y ortodoncia invisible.</p>
+        <p>Mejora y rejuvenece tu sonrisa con tratamientos de blanqueamiento profesional, carillas de porcelana y ortodoncia invisible.</p>
+        <span class="card-badge">Estética</span>
       </div>
-      <div class="card fade-up" style="transition-delay: 0.4s;">
+      <div class="card fade-up" style="transition-delay: 0.2s;">
+        <div class="icon">💎</div>
+        <h3>Blanqueamiento Láser Indoloro</h3>
+        <p>Obtén una sonrisa hasta 8 tonos más brillante en una sola sesión con nuestro sistema de blanqueamiento con láser de última generación, completamente indoloro.</p>
+        <span class="card-badge">⭐ Destacado</span>
+      </div>
+      <div class="card fade-up" style="transition-delay: 0.3s;">
         <div class="icon">🦷</div>
         <h3>Implantes y Coronas</h3>
         <p>Soluciones permanentes, duraderas y de aspecto 100% natural para restaurar la función de dientes faltantes o dañados.</p>
+        <span class="card-badge">Restauración</span>
+      </div>
+      <div class="card fade-up" style="transition-delay: 0.4s;">
+        <div class="icon">😁</div>
+        <h3>Ortodoncia e Invisalign</h3>
+        <p>Corrige la alineación de tus dientes con brackets modernos o alineadores transparentes. Sonríe con confianza en cada etapa del tratamiento.</p>
+        <span class="card-badge">Ortodoncia</span>
+      </div>
+      <div class="card fade-up" style="transition-delay: 0.5s;">
+        <div class="icon">🚨</div>
+        <h3>Urgencias Dentales</h3>
+        <p>Atención de emergencias el mismo día. Dolor de muela, diente roto o absceso dental — estamos aquí cuando más nos necesitas.</p>
+        <span class="card-badge">Urgencias</span>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <h2>Smile Avenue</h2>
-    <p style="margin: 20px 0;">San José, Costa Rica | (506) 8888-8888</p>
-    <p>&copy; 2026 Smile Avenue. Todos los derechos reservados.</p>
+  <section class="bg-light" style="padding: 50px 5%;">
+    <div style="max-width: 800px; margin: 0 auto; background: var(--white); border-radius: 16px; border: 1.5px solid var(--border); padding: 32px 36px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
+      <div style="font-size: 48px; flex-shrink: 0;">🛡️</div>
+      <div style="flex: 1; min-width: 220px;">
+        <div style="font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;">Cobertura de Seguro</div>
+        <h3 style="font-size: 1.2rem; margin-bottom: 8px; color: var(--primary);">Aceptamos Seguro Médico Palig</h3>
+        <p style="color: var(--light-text); font-size: 0.9rem; line-height: 1.6;">En Smile Avenue aceptamos el seguro médico <strong>Palig</strong>. Si eres asegurado, consulta con nuestro equipo los servicios cubiertos y agenda tu cita con facilidad.</p>
+      </div>
+      <button class="btn btn-primary" onclick="abrirModal()" style="flex-shrink: 0; white-space: nowrap;">Consultar Cobertura</button>
+    </div>
+  </section>
+
+  <section id="doctores">
+    <div class="section-header fade-up">
+      <span class="section-tag">Nuestro Equipo</span>
+      <h2>Conozca a Nuestros Doctores</h2>
+      <p>Profesionales apasionados y altamente capacitados comprometidos con tu salud dental y tu sonrisa.</p>
+    </div>
+    <div class="doctors-grid">
+
+      <div class="doctor-card fade-up">
+        <div class="doctor-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>
+        <div class="doctor-info">
+          <div class="doctor-name">Dra. Susana Apuy</div>
+          <div class="doctor-title">Odontología General y Pediátrica</div>
+          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Apuy atiende tanto pacientes adultos como niños con un trato cálido y paciente. Se especializa en crear un ambiente de confianza para quienes sienten nerviosismo al visitar al dentista, ofreciendo tratamientos completos para toda la familia.</div>
+          <div class="doctor-specialties">
+            <span class="specialty-tag">Adultos</span>
+            <span class="specialty-tag">Pediatría Dental</span>
+            <span class="specialty-tag">UCR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card fade-up" style="transition-delay: 0.15s;">
+        <div class="doctor-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>
+        <div class="doctor-info">
+          <div class="doctor-name">Dra. Brenda Ponce</div>
+          <div class="doctor-title">Odontología General y Pediátrica</div>
+          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Ponce cuenta con amplia experiencia atendiendo pacientes de todas las edades. Su enfoque es brindar una atención integral, preventiva y de calidad, haciendo que cada visita sea una experiencia cómoda y positiva tanto para niños como para adultos.</div>
+          <div class="doctor-specialties">
+            <span class="specialty-tag">Adultos</span>
+            <span class="specialty-tag">Pediatría Dental</span>
+            <span class="specialty-tag">UCR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card doctor-card--empty fade-up" style="transition-delay: 0.3s;">
+        <div class="doctor-img doctor-img--empty">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="opacity:0.25;">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>
+        <div class="doctor-info" style="text-align:center; padding: 30px 24px;">
+          <div class="doctor-name" style="color: var(--light-text);">Próximamente</div>
+          <div class="doctor-bio" style="margin-top: 10px; font-size: 0.85rem;">Estamos ampliando nuestro equipo. ¡Pronto te presentaremos a un nuevo especialista!</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-grid">
+      <div class="footer-brand fade-up">
+        <a href="#" class="logo">
+          <span class="logo-smile">Smile</span>
+          <span class="logo-avenue">AVENUE</span>
+          <svg class="logo-swoosh" viewBox="0 0 100 25" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,5 Q 50,25 100,5 Q 50,18 0,5 Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <p>Tu clínica dental de confianza en el corazón de San José, Costa Rica. Comprometidos con tu sonrisa y tu bienestar.</p>
+      </div>
+      <div class="footer-col fade-up" style="transition-delay: 0.1s;">
+        <h4>NAVEGACIÓN</h4>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#doctores">Doctores</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col fade-up" style="transition-delay: 0.2s;">
+        <h4>CONTACTO</h4>
+        <p>📍 San José, Costa Rica</p>
+        <p>📞 (506) 8888-8888</p>
+        <p>✉️ hola@smileavenue.cr</p>
+        <p style="margin-top: 14px;">🕐 Lun–Vie: 8am – 6pm</p>
+        <p>🕐 Sáb: 8am – 2pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Smile Avenue. Todos los derechos reservados. | San José, Costa Rica</p>
+    </div>
   </footer>
 
-  <div class="modal-overlay" id="bookingModal">
+  <div class="modal-overlay" id="modalCita">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal()">&times;</span>
-      <h2 style="margin-bottom: 20px;">Agendar una Cita</h2>
-      
-      <form id="bookingForm" onsubmit="submitForm(event)">
-        <div class="form-group">
-          <label>Nombre Completo</label>
-          <input type="text" required placeholder="Ej: Juan Pérez">
+      <button class="close-modal" onclick="cerrarModal()" aria-label="Cerrar">&times;</button>
+      <div class="modal-header">
+        <h2>Agendar una Cita</h2>
+        <p>Completa el formulario y nuestro equipo te contactará para confirmar tu cita.</p>
+      </div>
+      <form id="formularioCita" onsubmit="enviarFormulario(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required placeholder="Juan">
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" required placeholder="Pérez">
+          </div>
         </div>
         <div class="form-group">
-          <label>Número de Teléfono</label>
-          <input type="tel" required placeholder="(506) 8888-8888">
+          <label for="telefono">Número de Teléfono</label>
+          <input type="tel" id="telefono" required placeholder="8888-8888">
         </div>
         <div class="form-group">
-          <label>Motivo de la Visita</label>
-          <select required>
-            <option value="">Selecciona una opción...</option>
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" placeholder="juan@correo.com">
+        </div>
+        <div class="form-group">
+          <label for="servicio">Motivo de la Visita</label>
+          <select id="servicio" required>
+            <option value="">Selecciona un servicio...</option>
             <option value="limpieza">Limpieza Dental de Rutina</option>
-            <option value="dolor">Dolor de Muela / Emergencia</option>
+            <option value="blanqueamiento">Blanqueamiento Láser Indoloro</option>
+            <option value="dolor">Dolor de Muela / Urgencia</option>
             <option value="estetica">Consulta Estética</option>
+            <option value="implantes">Implantes y Coronas</option>
+            <option value="ortodoncia">Ortodoncia / Invisalign</option>
+            <option value="palig">Consulta con Seguro Palig</option>
+            <option value="otro">Otro</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud</button>
+        <div class="form-group">
+          <label for="mensaje">Mensaje Adicional (opcional)</label>
+          <textarea id="mensaje" placeholder="Cuéntanos más sobre tu caso o alguna pregunta que tengas..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Enviar Solicitud de Cita</button>
       </form>
     </div>
   </div>
 
+  <div class="toast" id="toast">✅ ¡Solicitud enviada! Te contactaremos pronto.</div>
+
   <script>
-    // 1. EFECTO DE SCROLL EN EL HEADER
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // 2. LÓGICA DEL MENÚ MÓVIL
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    const navItems = document.querySelectorAll('.nav-item');
+    const mobileMenu = document.getElementById('mobileMenu');
 
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const abierto = mobileMenu.classList.toggle('active');
+      hamburger.classList.toggle('open', abierto);
+      document.body.style.overflow = abierto ? 'hidden' : '';
     });
 
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
+    function cerrarMenuMovil() {
+      mobileMenu.classList.remove('active');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    }
 
-    // 3. ANIMACIONES AL HACER SCROLL
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.2 
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    const fadeElements = document.querySelectorAll('.fade-up');
-    fadeElements.forEach(el => observer.observe(el));
+    const modal = document.getElementById('modalCita');
 
-    // 4. LÓGICA DEL MODAL
-    const modal = document.getElementById('bookingModal');
-
-    function openModal() {
+    function abrirModal() {
       modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
 
-    function closeModal() {
+    function cerrarModal() {
       modal.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
+    window.addEventListener('click', (e) => { if (e.target === modal) cerrarModal(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarModal(); });
 
-    // 5. SIMULACIÓN DE ENVÍO
-    function submitForm(event) {
-      event.preventDefault(); 
-      alert("¡Gracias! Tu solicitud de cita ha sido enviada. Nuestro equipo te llamará en breve para confirmar la hora.");
-      closeModal();
-      document.getElementById('bookingForm').reset(); 
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const servicio = document.getElementById('servicio').value;
+      if (!nombre || !telefono || !servicio) return;
+      cerrarModal();
+      document.getElementById('formularioCita').reset();
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
     }
   </script>
 </body>
