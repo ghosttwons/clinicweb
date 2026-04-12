@@ -4,10 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Smile Avenue | Mejor Clínica Dental en San José | Costa Rica</title>
+  <title>Smile Avenue | Clínica Dental en San José, Costa Rica | Dentista Cerca de Ti</title>
   
-  <meta name="description" content="¿Buscas un dentista cerca de ti? Smile Avenue es una clínica dental profesional en San José. Ofrecemos limpieza dental, blanqueamiento con láser, implantes y más.">
-  <meta name="keywords" content="costa rica dentistas, clinicas dentales, mejor clinica en san jose, dentista cerca de mi, clinica dental profesional, servicios dentales, limpieza dental, blanqueamiento laser, Smile Avenue, odontología">
+  <meta name="description" content="¿Buscas un dentista cerca de ti en San José? Smile Avenue es una clínica dental profesional en Costa Rica. Limpieza dental, blanqueamiento láser, implantes, ortodoncia y más. Aceptamos Palig.">
+  <meta name="keywords" content="clinica dental san jose costa rica, dentista cerca de ti, dentista san jose, clinicas dentales costa rica, mejor dentista costa rica, limpieza dental san jose, blanqueamiento laser costa rica, implantes dentales san jose, ortodoncia san jose, dentista pediatrico costa rica, Smile Avenue, odontologia costa rica, dentista palig">
+
+  <meta property="og:title" content="Smile Avenue | Clínica Dental en San José, Costa Rica">
+  <meta property="og:description" content="Clínica dental profesional en San José, Costa Rica. Atendemos adultos y niños. Limpieza, blanqueamiento láser, implantes y más. Aceptamos seguro Palig.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CR">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Smile Avenue",
+    "description": "Clínica dental profesional en San José, Costa Rica. Servicios de odontología general, estética, pediátrica e implantes.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San José",
+      "addressCountry": "CR"
+    },
+    "telephone": "+50664622940",
+    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-14:00"],
+    "priceRange": "$$",
+    "areaServed": "San José, Costa Rica",
+    "medicalSpecialty": ["Dentistry", "Pediatric Dentistry", "Cosmetic Dentistry"]
+  }
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
@@ -28,24 +52,15 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; font-family: 'Poppins', sans-serif; }
-
     h1, h2, h3, h4 { color: var(--primary); font-family: 'Poppins', sans-serif; }
 
-    .btn {
-      display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none;
-      font-weight: 600; cursor: pointer; border: none; transition: all 0.3s ease;
-      font-family: 'Poppins', sans-serif; font-size: 0.95rem;
-    }
+    .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; cursor: pointer; border: none; transition: all 0.3s ease; font-family: 'Poppins', sans-serif; font-size: 0.95rem; }
     .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 4px 15px rgba(74,98,120,0.35); }
     .btn-primary:hover { background: #374A5C; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(74,98,120,0.4); }
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.6); }
     .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
 
-    header {
-      position: fixed; top: 0; width: 100%;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 18px 5%; background: var(--primary); z-index: 1000; transition: all 0.35s ease;
-    }
+    header { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; background: var(--primary); z-index: 1000; transition: all 0.35s ease; }
     header.scrolled { padding: 12px 5%; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 
     .logo { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--white); transition: color 0.3s ease; }
@@ -71,23 +86,13 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-    .mobile-menu {
-      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: var(--primary); z-index: 999; flex-direction: column;
-      justify-content: center; align-items: center; gap: 30px;
-      opacity: 0; visibility: hidden; transition: all 0.3s ease;
-    }
+    .mobile-menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--primary); z-index: 999; flex-direction: column; justify-content: center; align-items: center; gap: 30px; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
     .mobile-menu.active { opacity: 1; visibility: visible; }
     .mobile-menu a { color: var(--white); text-decoration: none; font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; transition: color 0.3s; }
     .mobile-menu a:hover { color: var(--accent-light); }
     .mobile-menu .btn { margin-top: 10px; }
 
-    .hero {
-      min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
-      background: linear-gradient(160deg, rgba(26,41,56,0.92) 0%, rgba(74,98,120,0.85) 100%),
-        url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-      padding: 120px 20px 80px; color: var(--white);
-    }
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(160deg, rgba(26,41,56,0.92) 0%, rgba(74,98,120,0.85) 100%), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; padding: 120px 20px 80px; color: var(--white); }
     .hero-inner { max-width: 750px; margin: 0 auto; }
     .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.9); padding: 6px 20px; border-radius: 50px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
     .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); margin-bottom: 20px; line-height: 1.2; font-family: 'Playfair Display', serif; }
@@ -150,7 +155,7 @@
     .form-group { margin-bottom: 18px; }
     .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.82rem; color: var(--primary); letter-spacing: 0.5px; }
     .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--dark); background: var(--bg); transition: all 0.25s; appearance: none; -webkit-appearance: none; }
-    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236A757D' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px; background-color: var(--bg); }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236A757D' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-color: var(--bg); padding-right: 38px; }
     .form-group textarea { resize: vertical; min-height: 90px; }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); background: var(--white); box-shadow: 0 0 0 3px rgba(74,98,120,0.12); }
     .form-group input::placeholder, .form-group textarea::placeholder { color: #AABAC6; }
@@ -158,7 +163,7 @@
     .form-submit { width: 100%; padding: 15px; border-radius: 50px; background: var(--accent); color: var(--white); border: none; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px; margin-top: 6px; }
     .form-submit:hover { background: #374A5C; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(74,98,120,0.35); }
 
-    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--success); color: var(--white); padding: 14px 28px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 3000; opacity: 0; transition: all 0.4s; pointer-events: none; }
+    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--success); color: var(--white); padding: 14px 28px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 3000; opacity: 0; transition: all 0.4s; pointer-events: none; white-space: nowrap; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     footer { background: var(--primary); color: var(--white); padding: clamp(50px, 8vw, 80px) 5% 40px; }
@@ -208,7 +213,7 @@
         <path d="M 0,5 Q 50,25 100,5 Q 50,18 0,5 Z" fill="currentColor"/>
       </svg>
     </a>
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links">
       <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
       <a href="#doctores">Doctores</a>
@@ -230,9 +235,9 @@
 
   <section class="hero">
     <div class="hero-inner fade-up">
-      <div class="hero-badge">✦ Clínica Dental Profesional ✦</div>
+      <div class="hero-badge">✦ Clínica Dental Profesional · San José, CR ✦</div>
       <h1>La Mejor Clínica en San José para tu <em>Sonrisa</em></h1>
-      <p>Si buscas un <strong>dentista cerca de mí</strong> de confianza, en Smile Avenue encontrarás atención moderna, indolora y compasiva para toda la familia.</p>
+      <p>Si buscas un <strong>dentista cerca de ti</strong> en San José, en Smile Avenue encontrarás atención moderna, indolora y compasiva para toda la familia.</p>
       <div class="hero-btns">
         <button class="btn btn-primary" onclick="abrirModal()">Solicitar Cita Ahora</button>
         <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
@@ -244,11 +249,11 @@
     <div class="section-header fade-up">
       <span class="section-tag">Quiénes somos</span>
       <h2>Bienvenido a tu Nuevo Hogar Dental</h2>
-      <p>Destacamos entre las <strong>clínicas dentales</strong> al diseñar una experiencia basada enteramente en tu confort y bienestar.</p>
+      <p>Destacamos entre las <strong>clínicas dentales en San José</strong> al diseñar una experiencia basada enteramente en tu confort y bienestar.</p>
     </div>
     <div class="about-grid">
       <div class="about-card fade-up">
-        <h3>🦷 Expertos Costa Rica Dentistas</h3>
+        <h3>🦷 Dentistas en Costa Rica</h3>
         <p>Nuestro equipo de profesionales altamente capacitados utiliza tecnología de vanguardia para garantizar tratamientos de la más alta calidad y seguridad.</p>
       </div>
       <div class="about-card fade-up" style="transition-delay: 0.15s;">
@@ -334,9 +339,7 @@
 
       <div class="doctor-card fade-up">
         <div class="doctor-img">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
         </div>
         <div class="doctor-info">
           <div class="doctor-name">Dra. Susana Apuy</div>
@@ -352,9 +355,7 @@
 
       <div class="doctor-card fade-up" style="transition-delay: 0.15s;">
         <div class="doctor-img">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
         </div>
         <div class="doctor-info">
           <div class="doctor-name">Dra. Brenda Ponce</div>
@@ -368,11 +369,25 @@
         </div>
       </div>
 
-      <div class="doctor-card doctor-card--empty fade-up" style="transition-delay: 0.3s;">
+      <div class="doctor-card fade-up" style="transition-delay: 0.3s;">
+        <div class="doctor-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        </div>
+        <div class="doctor-info">
+          <div class="doctor-name">Dra. Michelle Rojas</div>
+          <div class="doctor-title">Odontología General y Pediátrica</div>
+          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Rojas se destaca por su dedicación y su trato cercano con cada paciente. Atiende tanto adultos como niños, enfocándose en la prevención y en lograr que cada visita sea una experiencia tranquila y de confianza para toda la familia.</div>
+          <div class="doctor-specialties">
+            <span class="specialty-tag">Adultos</span>
+            <span class="specialty-tag">Pediatría Dental</span>
+            <span class="specialty-tag">UCR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card doctor-card--empty fade-up" style="transition-delay: 0.45s;">
         <div class="doctor-img doctor-img--empty">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="opacity:0.25;">
-            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="opacity:0.25;"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
         </div>
         <div class="doctor-info" style="text-align:center; padding: 30px 24px;">
           <div class="doctor-name" style="color: var(--light-text);">Próximamente</div>
@@ -407,7 +422,7 @@
       <div class="footer-col fade-up" style="transition-delay: 0.2s;">
         <h4>CONTACTO</h4>
         <p>📍 San José, Costa Rica</p>
-        <p>📞 (506) 8888-8888</p>
+        <p>📞 6462-2940</p>
         <p>✉️ hola@smileavenue.cr</p>
         <p style="margin-top: 14px;">🕐 Lun–Vie: 8am – 6pm</p>
         <p>🕐 Sáb: 8am – 2pm</p>
@@ -429,20 +444,20 @@
         <div class="form-row">
           <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required placeholder="Juan">
+            <input type="text" id="nombre" required placeholder="ej:Juan">
           </div>
           <div class="form-group">
             <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" required placeholder="Pérez">
+            <input type="text" id="ej:apellido" required placeholder="Pérez">
           </div>
         </div>
         <div class="form-group">
           <label for="telefono">Número de Teléfono</label>
-          <input type="tel" id="telefono" required placeholder="6462-2940">
+          <input type="tel" id="telefono" required placeholder="ej:6462-2940">
         </div>
         <div class="form-group">
           <label for="correo">Correo Electrónico</label>
-          <input type="email" id="correo" placeholder="juan@correo.com">
+          <input type="email" id="correo" placeholder="ej:juan@correo.com">
         </div>
         <div class="form-group">
           <label for="servicio">Motivo de la Visita</label>
@@ -477,7 +492,6 @@
 
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-
     hamburger.addEventListener('click', () => {
       const abierto = mobileMenu.classList.toggle('active');
       hamburger.classList.toggle('open', abierto);
@@ -492,26 +506,14 @@
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.15 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
     const modal = document.getElementById('modalCita');
-
-    function abrirModal() {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function cerrarModal() {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
+    function abrirModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function cerrarModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
     window.addEventListener('click', (e) => { if (e.target === modal) cerrarModal(); });
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarModal(); });
 
