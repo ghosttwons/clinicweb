@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Smile Avenue | Clínica Dental en San José, Costa Rica | Dentista Cerca de Ti</title>
-  
-  <meta name="description" content="¿Buscas un dentista cerca de ti en San José? Smile Avenue es una clínica dental profesional en Costa Rica. Limpieza dental, blanqueamiento láser, implantes, ortodoncia y más. Aceptamos Palig.">
+  <title>Smile Avenue | Clinica Dental en San Jose, Costa Rica</title>
+  <meta name="description" content="Busca un dentista cerca de ti en San Jose. Smile Avenue es una clinica dental profesional en Costa Rica. Limpieza dental, blanqueamiento laser, implantes, ortodoncia y mas. Aceptamos Palig.">
   <meta name="keywords" content="clinica dental san jose costa rica, dentista cerca de ti, dentista san jose, clinicas dentales costa rica, mejor dentista costa rica, limpieza dental san jose, blanqueamiento laser costa rica, implantes dentales san jose, ortodoncia san jose, dentista pediatrico costa rica, Smile Avenue, odontologia costa rica, dentista palig">
-
-  <meta property="og:title" content="Smile Avenue | Clínica Dental en San José, Costa Rica">
-  <meta property="og:description" content="Clínica dental profesional en San José, Costa Rica. Atendemos adultos y niños. Limpieza, blanqueamiento láser, implantes y más. Aceptamos seguro Palig.">
+  <meta property="og:title" content="Smile Avenue | Clinica Dental en San Jose, Costa Rica">
+  <meta property="og:description" content="Clinica dental profesional en San Jose, Costa Rica. Atendemos adultos y ninos. Limpieza, blanqueamiento laser, implantes y mas. Aceptamos seguro Palig.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CR">
 
@@ -19,22 +16,22 @@
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Smile Avenue",
-    "description": "Clínica dental profesional en San José, Costa Rica. Servicios de odontología general, estética, pediátrica e implantes.",
+    "description": "Clinica dental profesional en San Jose, Costa Rica.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "San José",
+      "addressLocality": "San Jose",
       "addressCountry": "CR"
     },
     "telephone": "+50664622940",
     "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-14:00"],
     "priceRange": "$$",
-    "areaServed": "San José, Costa Rica",
+    "areaServed": "San Jose, Costa Rica",
     "medicalSpecialty": ["Dentistry", "Pediatric Dentistry", "Cosmetic Dentistry"]
   }
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
     :root {
       --primary: #1A2938;
@@ -47,6 +44,8 @@
       --white: #FFFFFF;
       --border: #DDE3E8;
       --success: #3A7D61;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1DA851;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -60,6 +59,26 @@
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.6); }
     .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
 
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--whatsapp);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.35);
+      cursor: pointer;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37,211,102,0.45); }
+    .btn-whatsapp svg { flex-shrink: 0; }
+
     header { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; background: var(--primary); z-index: 1000; transition: all 0.35s ease; }
     header.scrolled { padding: 12px 5%; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
 
@@ -67,10 +86,10 @@
     .logo-smile { font-family: 'Playfair Display', serif; font-size: 36px; font-style: italic; font-weight: 400; line-height: 1; margin-bottom: 2px; }
     .logo-avenue { font-family: 'Poppins', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 6px; font-weight: 300; margin-left: 6px; }
     .logo-swoosh { width: 120%; height: 10px; margin-top: 4px; color: var(--white); transition: color 0.3s ease; }
-    header.scrolled .logo, header.scrolled .logo-smile, header.scrolled .logo-avenue { color: var(--primary); }
+    header.scrolled .logo { color: var(--primary); }
     header.scrolled .logo-swoosh { color: var(--primary); }
 
-    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
     .nav-links a { text-decoration: none; color: rgba(255,255,255,0.85); font-weight: 500; font-size: 0.92rem; transition: color 0.3s; position: relative; }
     .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent-light); transition: width 0.3s; }
     .nav-links a:hover::after { width: 100%; }
@@ -78,6 +97,16 @@
     header.scrolled .nav-links a { color: var(--dark); }
     header.scrolled .nav-links a:hover { color: var(--accent); }
     header.scrolled .nav-links a::after { background: var(--accent); }
+
+    .nav-wa-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px;
+      color: var(--whatsapp) !important;
+      font-weight: 600 !important;
+    }
+    .nav-wa-link::after { display: none !important; }
+    header.scrolled .nav-wa-link { color: var(--whatsapp-dark) !important; }
 
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .hamburger span { width: 26px; height: 2.5px; background: var(--white); border-radius: 3px; transition: all 0.3s; display: block; }
@@ -91,6 +120,18 @@
     .mobile-menu a { color: var(--white); text-decoration: none; font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; transition: color 0.3s; }
     .mobile-menu a:hover { color: var(--accent-light); }
     .mobile-menu .btn { margin-top: 10px; }
+    .mobile-wa-btn {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 10px;
+      background: var(--whatsapp);
+      color: var(--white) !important;
+      font-size: 1.1rem !important;
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
     .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(160deg, rgba(26,41,56,0.92) 0%, rgba(74,98,120,0.85) 100%), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; padding: 120px 20px 80px; color: var(--white); }
     .hero-inner { max-width: 750px; margin: 0 auto; }
@@ -130,9 +171,7 @@
     .doctors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
     .doctor-card { background: var(--bg); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; }
     .doctor-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.08); }
-    .doctor-card--empty { border: 2px dashed var(--border); background: var(--bg); }
     .doctor-img { width: 100%; height: 260px; background: linear-gradient(135deg, #C8D8E4, #A4B8C8); display: flex; align-items: center; justify-content: center; }
-    .doctor-img--empty { background: linear-gradient(135deg, #E8EDF1, #D4DCE3); }
     .doctor-img svg { width: 90px; height: 90px; opacity: 0.5; }
     .doctor-info { padding: 24px; }
     .doctor-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; color: var(--primary); }
@@ -140,6 +179,22 @@
     .doctor-bio { color: var(--light-text); font-size: 0.87rem; line-height: 1.7; }
     .doctor-specialties { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
     .specialty-tag { background: var(--white); border: 1px solid var(--border); color: var(--accent); padding: 3px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: 500; }
+
+    .contact-cta-section { background: linear-gradient(135deg, var(--primary) 0%, #2A4A60 100%); padding: clamp(60px, 8vw, 90px) 5%; text-align: center; color: var(--white); }
+    .contact-cta-section h2 { color: var(--white); font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 12px; }
+    .contact-cta-section p { color: rgba(255,255,255,0.75); max-width: 550px; margin: 0 auto 36px; font-size: 1rem; }
+    .contact-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center; }
+
+    .whatsapp-float { position: fixed; bottom: 30px; right: 28px; z-index: 1500; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .whatsapp-float-bubble { background: var(--white); border-radius: 16px; padding: 12px 18px; box-shadow: 0 6px 24px rgba(0,0,0,0.13); font-size: 0.82rem; color: var(--dark); font-weight: 500; max-width: 220px; line-height: 1.4; opacity: 0; transform: translateY(10px) scale(0.95); transition: all 0.35s ease; pointer-events: none; border: 1px solid var(--border); position: relative; }
+    .whatsapp-float-bubble::after { content: ''; position: absolute; bottom: -8px; right: 22px; width: 14px; height: 14px; background: var(--white); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transform: rotate(45deg); }
+    .whatsapp-float-bubble.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .whatsapp-float-btn { width: 62px; height: 62px; border-radius: 50%; background: var(--whatsapp); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,0.45); text-decoration: none; transition: all 0.3s ease; animation: wa-pulse 2.5s ease-in-out infinite; }
+    .whatsapp-float-btn:hover { background: var(--whatsapp-dark); transform: scale(1.1); box-shadow: 0 10px 30px rgba(37,211,102,0.55); animation: none; }
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+      50% { box-shadow: 0 6px 35px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.08); }
+    }
 
     .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26,41,56,0.75); backdrop-filter: blur(6px); display: flex; justify-content: center; align-items: center; z-index: 2000; opacity: 0; visibility: hidden; transition: all 0.3s; padding: 20px; }
     .modal-overlay.active { opacity: 1; visibility: visible; }
@@ -159,7 +214,6 @@
     .form-group textarea { resize: vertical; min-height: 90px; }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); background: var(--white); box-shadow: 0 0 0 3px rgba(74,98,120,0.12); }
     .form-group input::placeholder, .form-group textarea::placeholder { color: #AABAC6; }
-
     .form-submit { width: 100%; padding: 15px; border-radius: 50px; background: var(--accent); color: var(--white); border: none; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px; margin-top: 6px; }
     .form-submit:hover { background: #374A5C; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(74,98,120,0.35); }
 
@@ -175,6 +229,8 @@
     .footer-col ul li a { color: #8AA4B8; text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
     .footer-col ul li a:hover { color: var(--white); }
     .footer-col p { color: #8AA4B8; font-size: 0.88rem; margin-bottom: 8px; }
+    .footer-wa-link { display: inline-flex; align-items: center; gap: 8px; background: var(--whatsapp); color: var(--white) !important; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem !important; font-weight: 600; text-decoration: none; transition: all 0.3s; margin-top: 10px; }
+    .footer-wa-link:hover { background: var(--whatsapp-dark); transform: translateY(-2px); }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; text-align: center; color: #5A7A8E; font-size: 0.82rem; }
 
     @media (max-width: 900px) {
@@ -189,12 +245,16 @@
       .nav-cta { display: none; }
       .hero { padding: 100px 20px 60px; }
       .hero-btns { flex-direction: column; align-items: center; }
-      .hero-btns .btn { width: 100%; max-width: 300px; text-align: center; }
+      .hero-btns .btn, .hero-btns .btn-whatsapp { width: 100%; max-width: 300px; text-align: center; justify-content: center; }
       .services-grid { grid-template-columns: 1fr; }
       .doctors-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 28px; }
       .footer-brand { grid-column: auto; }
+      .contact-cta-btns { flex-direction: column; align-items: center; }
+      .contact-cta-btns .btn, .contact-cta-btns .btn-whatsapp { width: 100%; max-width: 300px; justify-content: center; }
+      .whatsapp-float { bottom: 20px; right: 18px; }
+      .whatsapp-float-btn { width: 54px; height: 54px; }
     }
     @media (max-width: 480px) {
       .logo-smile { font-size: 30px; }
@@ -218,9 +278,16 @@
       <a href="#servicios">Servicios</a>
       <a href="#doctores">Doctores</a>
       <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/50664622940?text=Hola%20Smile%20Avenue%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20servicios%20dentales."
+         target="_blank" rel="noopener noreferrer" class="nav-wa-link">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Contactanos
+      </a>
       <button class="btn btn-primary nav-cta" onclick="abrirModal()">Agendar Cita</button>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -230,43 +297,56 @@
     <a href="#servicios" onclick="cerrarMenuMovil()">Servicios</a>
     <a href="#doctores" onclick="cerrarMenuMovil()">Doctores</a>
     <a href="#contacto" onclick="cerrarMenuMovil()">Contacto</a>
+    <a href="https://wa.me/50664622940?text=Hola%20Smile%20Avenue%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20servicios%20dentales."
+       target="_blank" rel="noopener noreferrer" class="mobile-wa-btn" onclick="cerrarMenuMovil()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Contactanos
+    </a>
     <button class="btn btn-outline" onclick="cerrarMenuMovil(); abrirModal()">Agendar Cita</button>
   </div>
 
   <section class="hero">
     <div class="hero-inner fade-up">
-      <div class="hero-badge">✦ Clínica Dental Profesional · San José, CR ✦</div>
-      <h1>La Mejor Clínica en San José para tu <em>Sonrisa</em></h1>
-      <p>Si buscas un <strong>dentista cerca de ti</strong> en San José, en Smile Avenue encontrarás atención moderna, indolora y compasiva para toda la familia.</p>
+      <div class="hero-badge">Clinica Dental Profesional - San Jose, CR</div>
+      <h1>La Mejor Clinica en San Jose para tu <em>Sonrisa</em></h1>
+      <p>Si buscas un <strong>dentista cerca de ti</strong> en San Jose, en Smile Avenue encontraras atencion moderna, indolora y compasiva para toda la familia.</p>
       <div class="hero-btns">
         <button class="btn btn-primary" onclick="abrirModal()">Solicitar Cita Ahora</button>
-        <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+        <a href="https://wa.me/50664622940?text=Hola%20Smile%20Avenue%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20servicios%20dentales."
+           target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Contactanos
+        </a>
       </div>
     </div>
   </section>
 
   <section id="nosotros">
     <div class="section-header fade-up">
-      <span class="section-tag">Quiénes somos</span>
+      <span class="section-tag">Quienes somos</span>
       <h2>Bienvenido a tu Nuevo Hogar Dental</h2>
-      <p>Destacamos entre las <strong>clínicas dentales en San José</strong> al diseñar una experiencia basada enteramente en tu confort y bienestar.</p>
+      <p>Destacamos entre las clinicas dentales en San Jose al disenar una experiencia basada enteramente en tu confort y bienestar.</p>
     </div>
     <div class="about-grid">
       <div class="about-card fade-up">
-        <h3>🦷 Dentistas en Costa Rica</h3>
-        <p>Nuestro equipo de profesionales altamente capacitados utiliza tecnología de vanguardia para garantizar tratamientos de la más alta calidad y seguridad.</p>
+        <h3>&#x1F9B7; Dentistas en Costa Rica</h3>
+        <p>Nuestro equipo de profesionales altamente capacitados utiliza tecnologia de vanguardia para garantizar tratamientos de la mas alta calidad y seguridad.</p>
       </div>
       <div class="about-card fade-up" style="transition-delay: 0.15s;">
-        <h3>😌 Confort Absoluto</h3>
-        <p>Desde instalaciones relajantes hasta técnicas de anestesia indoloras, eliminamos por completo la ansiedad de visitar el dentista.</p>
+        <h3>&#x1F60C; Confort Absoluto</h3>
+        <p>Desde instalaciones relajantes hasta tecnicas de anestesia indoloras, eliminamos por completo la ansiedad de visitar el dentista.</p>
       </div>
       <div class="about-card fade-up" style="transition-delay: 0.3s;">
-        <h3>🏆 Tecnología Avanzada</h3>
-        <p>Radiografías digitales, escáner 3D intraoral y equipos de última generación para diagnósticos más precisos y tratamientos más eficaces.</p>
+        <h3>&#x1F3C6; Tecnologia Avanzada</h3>
+        <p>Radiografias digitales, escaner 3D intraoral y equipos de ultima generacion para diagnosticos mas precisos y tratamientos mas eficaces.</p>
       </div>
       <div class="about-card fade-up" style="transition-delay: 0.45s;">
-        <h3>❤️ Atención Familiar</h3>
-        <p>Atendemos a pacientes de todas las edades. Desde los más pequeños hasta adultos mayores, toda la familia es bienvenida en Smile Avenue.</p>
+        <h3>&#x2764;&#xFE0F; Atencion Familiar</h3>
+        <p>Atendemos a pacientes de todas las edades. Desde los mas pequenos hasta adultos mayores, toda la familia es bienvenida en Smile Avenue.</p>
       </div>
     </div>
   </section>
@@ -275,43 +355,43 @@
     <div class="section-header fade-up">
       <span class="section-tag">Nuestros Servicios</span>
       <h2>Servicios Dentales Integrales</h2>
-      <p>Atención personalizada adaptada a tus necesidades únicas con tecnología de punta.</p>
+      <p>Atencion personalizada adaptada a tus necesidades unicas con tecnologia de punta.</p>
     </div>
     <div class="services-grid">
       <div class="card fade-up">
-        <div class="icon">🪥</div>
+        <div class="icon">&#x1FAA5;</div>
         <h3>Limpieza Dental</h3>
-        <p>Mantén tus dientes perfectamente sanos con nuestra limpieza dental profunda, exámenes de rutina y radiografías digitales precisas.</p>
+        <p>Manten tus dientes perfectamente sanos con nuestra limpieza dental profunda, examenes de rutina y radiografias digitales precisas.</p>
         <span class="card-badge">Preventivo</span>
       </div>
       <div class="card fade-up" style="transition-delay: 0.1s;">
-        <div class="icon">✨</div>
-        <h3>Odontología Estética</h3>
+        <div class="icon">&#x2728;</div>
+        <h3>Odontologia Estetica</h3>
         <p>Mejora y rejuvenece tu sonrisa con tratamientos de blanqueamiento profesional, carillas de porcelana y ortodoncia invisible.</p>
-        <span class="card-badge">Estética</span>
+        <span class="card-badge">Estetica</span>
       </div>
       <div class="card fade-up" style="transition-delay: 0.2s;">
-        <div class="icon">💎</div>
-        <h3>Blanqueamiento Láser Indoloro</h3>
-        <p>Obtén una sonrisa hasta 8 tonos más brillante en una sola sesión con nuestro sistema de blanqueamiento con láser de última generación, completamente indoloro.</p>
-        <span class="card-badge">⭐ Destacado</span>
+        <div class="icon">&#x1F48E;</div>
+        <h3>Blanqueamiento Laser Indoloro</h3>
+        <p>Obtén una sonrisa hasta 8 tonos mas brillante en una sola sesion con nuestro sistema de blanqueamiento laser de ultima generacion, completamente indoloro.</p>
+        <span class="card-badge">Destacado</span>
       </div>
       <div class="card fade-up" style="transition-delay: 0.3s;">
-        <div class="icon">🦷</div>
+        <div class="icon">&#x1F9B7;</div>
         <h3>Implantes y Coronas</h3>
-        <p>Soluciones permanentes, duraderas y de aspecto 100% natural para restaurar la función de dientes faltantes o dañados.</p>
-        <span class="card-badge">Restauración</span>
+        <p>Soluciones permanentes, duraderas y de aspecto 100% natural para restaurar la funcion de dientes faltantes o danados.</p>
+        <span class="card-badge">Restauracion</span>
       </div>
       <div class="card fade-up" style="transition-delay: 0.4s;">
-        <div class="icon">😁</div>
+        <div class="icon">&#x1F601;</div>
         <h3>Ortodoncia e Invisalign</h3>
-        <p>Corrige la alineación de tus dientes con brackets modernos o alineadores transparentes. Sonríe con confianza en cada etapa del tratamiento.</p>
+        <p>Corrige la alineacion de tus dientes con brackets modernos o alineadores transparentes. Sonrie con confianza en cada etapa del tratamiento.</p>
         <span class="card-badge">Ortodoncia</span>
       </div>
       <div class="card fade-up" style="transition-delay: 0.5s;">
-        <div class="icon">🚨</div>
+        <div class="icon">&#x1F6A8;</div>
         <h3>Urgencias Dentales</h3>
-        <p>Atención de emergencias el mismo día. Dolor de muela, diente roto o absceso dental — estamos aquí cuando más nos necesitas.</p>
+        <p>Atencion de emergencias el mismo dia. Dolor de muela, diente roto o absceso dental -- estamos aqui cuando mas nos necesitas.</p>
         <span class="card-badge">Urgencias</span>
       </div>
     </div>
@@ -319,11 +399,11 @@
 
   <section class="bg-light" style="padding: 50px 5%;">
     <div style="max-width: 800px; margin: 0 auto; background: var(--white); border-radius: 16px; border: 1.5px solid var(--border); padding: 32px 36px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
-      <div style="font-size: 48px; flex-shrink: 0;">🛡️</div>
+      <div style="font-size: 48px; flex-shrink: 0;">&#x1F6E1;&#xFE0F;</div>
       <div style="flex: 1; min-width: 220px;">
         <div style="font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;">Cobertura de Seguro</div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 8px; color: var(--primary);">Aceptamos Seguro Médico Palig</h3>
-        <p style="color: var(--light-text); font-size: 0.9rem; line-height: 1.6;">En Smile Avenue aceptamos el seguro médico <strong>Palig</strong>. Si eres asegurado, consulta con nuestro equipo los servicios cubiertos y agenda tu cita con facilidad.</p>
+        <h3 style="font-size: 1.2rem; margin-bottom: 8px; color: var(--primary);">Aceptamos Seguro Medico Palig</h3>
+        <p style="color: var(--light-text); font-size: 0.9rem; line-height: 1.6;">En Smile Avenue aceptamos el seguro medico <strong>Palig</strong>. Si eres asegurado, consulta con nuestro equipo los servicios cubiertos y agenda tu cita con facilidad.</p>
       </div>
       <button class="btn btn-primary" onclick="abrirModal()" style="flex-shrink: 0; white-space: nowrap;">Consultar Cobertura</button>
     </div>
@@ -336,59 +416,77 @@
       <p>Profesionales apasionados y altamente capacitados comprometidos con tu salud dental y tu sonrisa.</p>
     </div>
     <div class="doctors-grid">
-
       <div class="doctor-card fade-up">
         <div class="doctor-img">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
         </div>
         <div class="doctor-info">
           <div class="doctor-name">Dra. Susana Apuy</div>
-          <div class="doctor-title">Odontología General y Pediátrica</div>
-          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Apuy atiende tanto pacientes adultos como niños con un trato cálido y paciente. Se especializa en crear un ambiente de confianza para quienes sienten nerviosismo al visitar al dentista, ofreciendo tratamientos completos para toda la familia.</div>
+          <div class="doctor-title">Odontologia General y Pediatrica</div>
+          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Apuy atiende tanto pacientes adultos como ninos con un trato calido y paciente. Se especializa en crear un ambiente de confianza para quienes sienten nerviosismo al visitar al dentista, ofreciendo tratamientos completos para toda la familia.</div>
           <div class="doctor-specialties">
             <span class="specialty-tag">Adultos</span>
-            <span class="specialty-tag">Pediatría Dental</span>
+            <span class="specialty-tag">Pediatria Dental</span>
             <span class="specialty-tag">UCR</span>
           </div>
         </div>
       </div>
-
       <div class="doctor-card fade-up" style="transition-delay: 0.15s;">
         <div class="doctor-img">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
         </div>
         <div class="doctor-info">
           <div class="doctor-name">Dra. Brenda Ponce</div>
-          <div class="doctor-title">Odontología General y Pediátrica</div>
-          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Ponce cuenta con amplia experiencia atendiendo pacientes de todas las edades. Su enfoque es brindar una atención integral, preventiva y de calidad, haciendo que cada visita sea una experiencia cómoda y positiva tanto para niños como para adultos.</div>
+          <div class="doctor-title">Odontologia General y Pediatrica</div>
+          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Ponce cuenta con amplia experiencia atendiendo pacientes de todas las edades. Su enfoque es brindar una atencion integral, preventiva y de calidad, haciendo que cada visita sea una experiencia comoda y positiva tanto para ninos como para adultos.</div>
           <div class="doctor-specialties">
             <span class="specialty-tag">Adultos</span>
-            <span class="specialty-tag">Pediatría Dental</span>
+            <span class="specialty-tag">Pediatria Dental</span>
             <span class="specialty-tag">UCR</span>
           </div>
         </div>
       </div>
-
       <div class="doctor-card fade-up" style="transition-delay: 0.3s;">
         <div class="doctor-img">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
         </div>
         <div class="doctor-info">
           <div class="doctor-name">Dra. Michelle Rojas</div>
-          <div class="doctor-title">Odontología General y Pediátrica</div>
-          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Rojas se destaca por su dedicación y su trato cercano con cada paciente. Atiende tanto adultos como niños, enfocándose en la prevención y en lograr que cada visita sea una experiencia tranquila y de confianza para toda la familia.</div>
+          <div class="doctor-title">Odontologia General y Pediatrica</div>
+          <div class="doctor-bio">Graduada de la Universidad de Costa Rica, la Dra. Rojas se destaca por su dedicacion y su trato cercano con cada paciente. Atiende tanto adultos como ninos, enfocandose en la prevencion y en lograr que cada visita sea una experiencia tranquila y de confianza para toda la familia.</div>
           <div class="doctor-specialties">
             <span class="specialty-tag">Adultos</span>
-            <span class="specialty-tag">Pediatría Dental</span>
+            <span class="specialty-tag">Pediatria Dental</span>
             <span class="specialty-tag">UCR</span>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <footer id="contacto">
+  <section class="contact-cta-section fade-up" id="contacto">
+    <span class="section-tag" style="background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9);">Estamos aqui para ti</span>
+    <h2>Tienes alguna pregunta? Contactanos ahora!</h2>
+    <p>Escribenos por WhatsApp y te responderemos de inmediato. Tambien puedes agendar tu cita directamente desde aqui.</p>
+    <div class="contact-cta-btns">
+      <a href="https://wa.me/50664622940?text=Hola%20Smile%20Avenue%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20servicios%20dentales."
+         target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Contactanos por WhatsApp
+      </a>
+      <button class="btn btn-outline" onclick="abrirModal()">Agendar Cita Online</button>
+    </div>
+  </section>
+
+  <footer>
     <div class="footer-grid">
       <div class="footer-brand fade-up">
         <a href="#" class="logo">
@@ -398,10 +496,10 @@
             <path d="M 0,5 Q 50,25 100,5 Q 50,18 0,5 Z" fill="currentColor"/>
           </svg>
         </a>
-        <p>Tu clínica dental de confianza en el corazón de San José, Costa Rica. Comprometidos con tu sonrisa y tu bienestar.</p>
+        <p>Tu clinica dental de confianza en el corazon de San Jose, Costa Rica. Comprometidos con tu sonrisa y tu bienestar.</p>
       </div>
       <div class="footer-col fade-up" style="transition-delay: 0.1s;">
-        <h4>NAVEGACIÓN</h4>
+        <h4>NAVEGACION</h4>
         <ul>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
@@ -411,52 +509,71 @@
       </div>
       <div class="footer-col fade-up" style="transition-delay: 0.2s;">
         <h4>CONTACTO</h4>
-        <p>📍 San José, Costa Rica</p>
-        <p>📞 6462-2940</p>
-        <p>✉️ hola@smileavenue.cr</p>
-        <p style="margin-top: 14px;">🕐 Lun–Vie: 8am – 6pm</p>
-        <p>🕐 Sáb: 8am – 2pm</p>
+        <p>&#x1F4CD; San Jose, Costa Rica</p>
+        <p>&#x1F4DE; 6462-2940</p>
+        <p>&#x2709;&#xFE0F; hola@smileavenue.cr</p>
+        <p style="margin-top: 14px;">&#x1F550; Lun-Vie: 8am - 6pm</p>
+        <p>&#x1F550; Sab: 8am - 2pm</p>
+        <a href="https://wa.me/50664622940?text=Hola%20Smile%20Avenue%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20servicios%20dentales."
+           target="_blank" rel="noopener noreferrer" class="footer-wa-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Smile Avenue. Todos los derechos reservados. | San José, Costa Rica</p>
+      <p>&copy; 2026 Smile Avenue. Todos los derechos reservados. | San Jose, Costa Rica</p>
     </div>
   </footer>
+
+  <div class="whatsapp-float" id="waFloat">
+    <div class="whatsapp-float-bubble" id="waBubble">
+      &#x1F44B; Hola! En que podemos ayudarte hoy?
+    </div>
+    <a href="https://wa.me/50664622940?text=Hola%20Smile%20Avenue%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20servicios%20dentales."
+       target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Contactanos por WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
 
   <div class="modal-overlay" id="modalCita">
     <div class="modal-content">
       <button class="close-modal" onclick="cerrarModal()" aria-label="Cerrar">&times;</button>
       <div class="modal-header">
         <h2>Agendar una Cita</h2>
-        <p>Completa el formulario y nuestro equipo te contactará para confirmar tu cita.</p>
+        <p>Completa el formulario y nuestro equipo te contactara para confirmar tu cita.</p>
       </div>
       <form id="formularioCita" onsubmit="enviarFormulario(event)" novalidate>
         <div class="form-row">
           <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required placeholder="ej:Juan">
+            <input type="text" id="nombre" required placeholder="ej: Juan">
           </div>
           <div class="form-group">
             <label for="apellido">Apellido</label>
-            <input type="text" id="ej:apellido" required placeholder="Pérez">
+            <input type="text" id="apellido" required placeholder="ej: Perez">
           </div>
         </div>
         <div class="form-group">
-          <label for="telefono">Número de Teléfono</label>
-          <input type="tel" id="telefono" required placeholder="ej:6462-2940">
+          <label for="telefono">Numero de Telefono</label>
+          <input type="tel" id="telefono" required placeholder="ej: 6462-2940">
         </div>
         <div class="form-group">
-          <label for="correo">Correo Electrónico</label>
-          <input type="email" id="correo" placeholder="ej:juan@correo.com">
+          <label for="correo">Correo Electronico</label>
+          <input type="email" id="correo" placeholder="ej: juan@correo.com">
         </div>
         <div class="form-group">
           <label for="servicio">Motivo de la Visita</label>
           <select id="servicio" required>
             <option value="">Selecciona un servicio...</option>
             <option value="limpieza">Limpieza Dental de Rutina</option>
-            <option value="blanqueamiento">Blanqueamiento Láser Indoloro</option>
+            <option value="blanqueamiento">Blanqueamiento Laser Indoloro</option>
             <option value="dolor">Dolor de Muela / Urgencia</option>
-            <option value="estetica">Consulta Estética</option>
+            <option value="estetica">Consulta Estetica</option>
             <option value="implantes">Implantes y Coronas</option>
             <option value="ortodoncia">Ortodoncia / Invisalign</option>
             <option value="palig">Consulta con Seguro Palig</option>
@@ -465,25 +582,25 @@
         </div>
         <div class="form-group">
           <label for="mensaje">Mensaje Adicional (opcional)</label>
-          <textarea id="mensaje" placeholder="Cuéntanos más sobre tu caso o alguna pregunta que tengas..."></textarea>
+          <textarea id="mensaje" placeholder="Cuentanos mas sobre tu caso o alguna pregunta que tengas..."></textarea>
         </div>
         <button type="submit" class="form-submit">Enviar Solicitud de Cita</button>
       </form>
     </div>
   </div>
 
-  <div class="toast" id="toast">✅ ¡Solicitud enviada! Te contactaremos pronto.</div>
+  <div class="toast" id="toast">&#x2705; Solicitud enviada! Te contactaremos pronto.</div>
 
   <script>
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
       header.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      const abierto = mobileMenu.classList.toggle('active');
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      var abierto = mobileMenu.classList.toggle('active');
       hamburger.classList.toggle('open', abierto);
       document.body.style.overflow = abierto ? 'hidden' : '';
     });
@@ -494,31 +611,41 @@
       document.body.style.overflow = '';
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
       });
     }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
 
-    const modal = document.getElementById('modalCita');
+    var modal = document.getElementById('modalCita');
     function abrirModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
     function cerrarModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
-    window.addEventListener('click', (e) => { if (e.target === modal) cerrarModal(); });
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarModal(); });
+    window.addEventListener('click', function(e) { if (e.target === modal) cerrarModal(); });
+    window.addEventListener('keydown', function(e) { if (e.key === 'Escape') cerrarModal(); });
 
     function enviarFormulario(event) {
       event.preventDefault();
-      const nombre = document.getElementById('nombre').value.trim();
-      const telefono = document.getElementById('telefono').value.trim();
-      const servicio = document.getElementById('servicio').value;
+      var nombre = document.getElementById('nombre').value.trim();
+      var telefono = document.getElementById('telefono').value.trim();
+      var servicio = document.getElementById('servicio').value;
       if (!nombre || !telefono || !servicio) return;
       cerrarModal();
       document.getElementById('formularioCita').reset();
-      const toast = document.getElementById('toast');
+      var toast = document.getElementById('toast');
       toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 4000);
+      setTimeout(function() { toast.classList.remove('show'); }, 4000);
     }
+
+    setTimeout(function() {
+      var bubble = document.getElementById('waBubble');
+      bubble.classList.add('show');
+      setTimeout(function() { bubble.classList.remove('show'); }, 6000);
+    }, 3000);
   </script>
+
 </body>
 </html>
